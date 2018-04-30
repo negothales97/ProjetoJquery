@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery - Eventos</title>
+	<!-- bootstrap - link cdn -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!--Jquery link-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$( document ).ready (function(){
+			console.log( "O DOM está carregado");
+			/*
+			<----UTILIZAÇÃO DE EVENTOS COM O MOUSE---->
+			click - ao clicar uma vez
+			dblclick - ao realizar um clique duplo
+			mousedown - ao clicar, mas não necessariamente soltar o botão
+			mouseover - ao colocar o mouse sobre o elemento
+			mouseout - ao remover o mouse do elemento
+			*/
+			$('#div1').dblclick(function(){
+				alert('Botão apertado');
+			});
+			/*
+			<----UTILIZAÇÃO DE EVENTOS COM O TECLADO---->
+			keydown - ao pressionar qualquer tecla
+			keypress - todas as teclas, execeto as especiais (ALT, ESC, SHIFT ETC.)
+			keyup - ao pressionar qualquer tecla e remover o botão dela 
+			*/
+			$('#div2').keyup(function(){
+				alert('Tecla apertada');
+			});
+			/*
+			<----UTILIZAÇÃO DE EVENTOS COM O FORMULÁRIOS---->
+			focus - focar um label
+			blur - peder o foco de um label
+			change -quando o estado do label é alterado 
+			*/
+			$('#div3').change(function(){
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div id="div1" style="height: 150px; width: 150px; background: #CCC"></div>
+	<br><br>
+	<input type="text" id="div2">
+	<br><br>
+	<input type="text" id="div3">
+	<input type="text" id="div4">
+</body>
+</html>
+
